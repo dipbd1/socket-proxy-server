@@ -39,20 +39,20 @@ server.on('connection', (clientToProxySocket) => {
 
       proxyToServerSocket.on('error', (err) => {
         console.log('PROXY TO SERVER ERROR');
-        console.log(err);
+        // console.log(err);
       });
       
     });
     clientToProxySocket.on('error', err => {
       console.log('CLIENT TO PROXY ERROR');
-      console.log(err);
+      // console.log(err);
     });
   });
 });
 
 server.on('error', (err) => {
   console.log('SERVER ERROR');
-  console.log(err);
+  // console.log(err);
   throw err;
 });
 
